@@ -1,0 +1,155 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "surface": "create_linear_engineering:block/linear_rail",
+    "particle": "create_linear_engineering:block/linear_rail"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        4
+      ],
+      "faces": {
+        "south": {
+          "uv": [
+            0.0,
+            0.0,
+            8.0,
+            8.0
+          ],
+          "texture": "#surface",
+          "rotation": 270
+        },
+        "north": {
+          "uv": [
+            8.0,
+            8.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#surface",
+          "rotation": 270
+        },
+        "west": {
+          "uv": [
+            0.0,
+            14.0,
+            8.0,
+            16.0
+          ],
+          "texture": "#surface",
+          "rotation": 90
+        },
+        "east": {
+          "uv": [
+            0.0,
+            14.0,
+            8.0,
+            16.0
+          ],
+          "texture": "#surface",
+          "rotation": 270
+        },
+        "down": {
+          "uv": [
+            8.0,
+            6.0,
+            16.0,
+            8.0
+          ],
+          "texture": "#surface"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            6.0,
+            16.0,
+            8.0
+          ],
+          "texture": "#surface",
+          "rotation": 180
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        6,
+        4
+      ],
+      "to": [
+        16,
+        10,
+        12
+      ],
+      "faces": {
+        "south": {
+          "uv": [
+            3.0,
+            0.0,
+            5.0,
+            8.0
+          ],
+          "texture": "#surface",
+          "rotation": 270
+        },
+        "north": {
+          "uv": [
+            11.0,
+            8.0,
+            13.0,
+            16.0
+          ],
+          "texture": "#surface",
+          "rotation": 270
+        },
+        "west": {
+          "uv": [
+            3.0,
+            10.0,
+            5.0,
+            14.0
+          ],
+          "texture": "#surface",
+          "rotation": 90
+        },
+        "east": {
+          "uv": [
+            3.0,
+            10.0,
+            5.0,
+            14.0
+          ],
+          "texture": "#surface",
+          "rotation": 270
+        },
+        "down": {
+          "uv": [
+            8.0,
+            2.0,
+            16.0,
+            6.0
+          ],
+          "texture": "#surface"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            2.0,
+            16.0,
+            6.0
+          ],
+          "texture": "#surface",
+          "rotation": 180
+        }
+      }
+    }
+  ]
+}

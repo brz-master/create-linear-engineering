@@ -1,0 +1,214 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "surface": "create_linear_engineering:block/linear_carriage",
+    "particle": "create_linear_engineering:block/linear_carriage",
+    "lining": "create_linear_engineering:block/carriage_lining_none"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        12,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            0.0,
+            0.0,
+            8.0,
+            8.0
+          ],
+          "texture": "#surface"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            8.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#lining"
+        },
+        "north": {
+          "uv": [
+            0.0,
+            8.0,
+            8.0,
+            10.0
+          ],
+          "texture": "#surface"
+        },
+        "south": {
+          "uv": [
+            0.0,
+            8.0,
+            8.0,
+            10.0
+          ],
+          "texture": "#surface"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            16.0,
+            2.0
+          ],
+          "texture": "#surface"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            16.0,
+            2.0
+          ],
+          "texture": "#surface"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        4,
+        0
+      ],
+      "to": [
+        6,
+        12,
+        16
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            0.0,
+            0.0,
+            3.0,
+            8.0
+          ],
+          "texture": "#surface"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            8.0,
+            11.0,
+            16.0
+          ],
+          "texture": "#lining"
+        },
+        "north": {
+          "uv": [
+            0.0,
+            10.0,
+            3.0,
+            14.0
+          ],
+          "texture": "#surface"
+        },
+        "south": {
+          "uv": [
+            0.0,
+            10.0,
+            3.0,
+            14.0
+          ],
+          "texture": "#surface"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            2.0,
+            16.0,
+            6.0
+          ],
+          "texture": "#surface"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            2.0,
+            16.0,
+            6.0
+          ],
+          "texture": "#lining"
+        }
+      }
+    },
+    {
+      "from": [
+        10,
+        4,
+        0
+      ],
+      "to": [
+        16,
+        12,
+        16
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            5.0,
+            0.0,
+            8.0,
+            8.0
+          ],
+          "texture": "#surface"
+        },
+        "down": {
+          "uv": [
+            13.0,
+            8.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#lining"
+        },
+        "north": {
+          "uv": [
+            5.0,
+            10.0,
+            8.0,
+            14.0
+          ],
+          "texture": "#surface"
+        },
+        "south": {
+          "uv": [
+            5.0,
+            10.0,
+            8.0,
+            14.0
+          ],
+          "texture": "#surface"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            2.0,
+            16.0,
+            6.0
+          ],
+          "texture": "#lining"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            2.0,
+            16.0,
+            6.0
+          ],
+          "texture": "#surface"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "create_linear_engineering:block/oriented/linear_carriage_up_west",
+  "textures": {
+    "lining": "create_linear_engineering:block/carriage_lining_low",
+    "surface": "create_linear_engineering:block/carriage_surface_low"
+  }
+}

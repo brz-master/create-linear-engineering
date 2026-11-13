@@ -1,0 +1,544 @@
+{
+  "variants": {
+    "facing=down,normal=down,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_down_south"
+    },
+    "facing=down,normal=down,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_down_south_approximate_off"
+    },
+    "facing=down,normal=down,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_down_south_approximate_on"
+    },
+    "facing=down,normal=down,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_down_south_precise_off"
+    },
+    "facing=down,normal=down,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_down_south_precise_on"
+    },
+    "facing=down,normal=up,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_down_south"
+    },
+    "facing=down,normal=up,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_down_south_approximate_off"
+    },
+    "facing=down,normal=up,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_down_south_approximate_on"
+    },
+    "facing=down,normal=up,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_down_south_precise_off"
+    },
+    "facing=down,normal=up,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_down_south_precise_on"
+    },
+    "facing=down,normal=north,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_down_north"
+    },
+    "facing=down,normal=north,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_down_north_approximate_off"
+    },
+    "facing=down,normal=north,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_down_north_approximate_on"
+    },
+    "facing=down,normal=north,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_down_north_precise_off"
+    },
+    "facing=down,normal=north,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_down_north_precise_on"
+    },
+    "facing=down,normal=south,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_down_south"
+    },
+    "facing=down,normal=south,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_down_south_approximate_off"
+    },
+    "facing=down,normal=south,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_down_south_approximate_on"
+    },
+    "facing=down,normal=south,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_down_south_precise_off"
+    },
+    "facing=down,normal=south,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_down_south_precise_on"
+    },
+    "facing=down,normal=west,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_down_west"
+    },
+    "facing=down,normal=west,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_down_west_approximate_off"
+    },
+    "facing=down,normal=west,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_down_west_approximate_on"
+    },
+    "facing=down,normal=west,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_down_west_precise_off"
+    },
+    "facing=down,normal=west,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_down_west_precise_on"
+    },
+    "facing=down,normal=east,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_down_east"
+    },
+    "facing=down,normal=east,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_down_east_approximate_off"
+    },
+    "facing=down,normal=east,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_down_east_approximate_on"
+    },
+    "facing=down,normal=east,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_down_east_precise_off"
+    },
+    "facing=down,normal=east,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_down_east_precise_on"
+    },
+    "facing=up,normal=down,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_up_north"
+    },
+    "facing=up,normal=down,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_up_north_approximate_off"
+    },
+    "facing=up,normal=down,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_up_north_approximate_on"
+    },
+    "facing=up,normal=down,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_up_north_precise_off"
+    },
+    "facing=up,normal=down,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_up_north_precise_on"
+    },
+    "facing=up,normal=up,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_up_north"
+    },
+    "facing=up,normal=up,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_up_north_approximate_off"
+    },
+    "facing=up,normal=up,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_up_north_approximate_on"
+    },
+    "facing=up,normal=up,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_up_north_precise_off"
+    },
+    "facing=up,normal=up,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_up_north_precise_on"
+    },
+    "facing=up,normal=north,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_up_north"
+    },
+    "facing=up,normal=north,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_up_north_approximate_off"
+    },
+    "facing=up,normal=north,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_up_north_approximate_on"
+    },
+    "facing=up,normal=north,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_up_north_precise_off"
+    },
+    "facing=up,normal=north,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_up_north_precise_on"
+    },
+    "facing=up,normal=south,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_up_south"
+    },
+    "facing=up,normal=south,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_up_south_approximate_off"
+    },
+    "facing=up,normal=south,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_up_south_approximate_on"
+    },
+    "facing=up,normal=south,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_up_south_precise_off"
+    },
+    "facing=up,normal=south,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_up_south_precise_on"
+    },
+    "facing=up,normal=west,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_up_west"
+    },
+    "facing=up,normal=west,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_up_west_approximate_off"
+    },
+    "facing=up,normal=west,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_up_west_approximate_on"
+    },
+    "facing=up,normal=west,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_up_west_precise_off"
+    },
+    "facing=up,normal=west,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_up_west_precise_on"
+    },
+    "facing=up,normal=east,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_up_east"
+    },
+    "facing=up,normal=east,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_up_east_approximate_off"
+    },
+    "facing=up,normal=east,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_up_east_approximate_on"
+    },
+    "facing=up,normal=east,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_up_east_precise_off"
+    },
+    "facing=up,normal=east,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_up_east_precise_on"
+    },
+    "facing=north,normal=down,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_north_down"
+    },
+    "facing=north,normal=down,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_north_down_approximate_off"
+    },
+    "facing=north,normal=down,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_north_down_approximate_on"
+    },
+    "facing=north,normal=down,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_north_down_precise_off"
+    },
+    "facing=north,normal=down,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_north_down_precise_on"
+    },
+    "facing=north,normal=up,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_north_up"
+    },
+    "facing=north,normal=up,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_north_up_approximate_off"
+    },
+    "facing=north,normal=up,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_north_up_approximate_on"
+    },
+    "facing=north,normal=up,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_north_up_precise_off"
+    },
+    "facing=north,normal=up,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_north_up_precise_on"
+    },
+    "facing=north,normal=north,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_north_up"
+    },
+    "facing=north,normal=north,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_north_up_approximate_off"
+    },
+    "facing=north,normal=north,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_north_up_approximate_on"
+    },
+    "facing=north,normal=north,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_north_up_precise_off"
+    },
+    "facing=north,normal=north,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_north_up_precise_on"
+    },
+    "facing=north,normal=south,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_north_up"
+    },
+    "facing=north,normal=south,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_north_up_approximate_off"
+    },
+    "facing=north,normal=south,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_north_up_approximate_on"
+    },
+    "facing=north,normal=south,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_north_up_precise_off"
+    },
+    "facing=north,normal=south,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_north_up_precise_on"
+    },
+    "facing=north,normal=west,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_north_west"
+    },
+    "facing=north,normal=west,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_north_west_approximate_off"
+    },
+    "facing=north,normal=west,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_north_west_approximate_on"
+    },
+    "facing=north,normal=west,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_north_west_precise_off"
+    },
+    "facing=north,normal=west,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_north_west_precise_on"
+    },
+    "facing=north,normal=east,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_north_east"
+    },
+    "facing=north,normal=east,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_north_east_approximate_off"
+    },
+    "facing=north,normal=east,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_north_east_approximate_on"
+    },
+    "facing=north,normal=east,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_north_east_precise_off"
+    },
+    "facing=north,normal=east,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_north_east_precise_on"
+    },
+    "facing=south,normal=down,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_south_down"
+    },
+    "facing=south,normal=down,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_south_down_approximate_off"
+    },
+    "facing=south,normal=down,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_south_down_approximate_on"
+    },
+    "facing=south,normal=down,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_south_down_precise_off"
+    },
+    "facing=south,normal=down,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_south_down_precise_on"
+    },
+    "facing=south,normal=up,sensor=none": {
+      "model": "create_linear_engineering:block/screw_rail"
+    },
+    "facing=south,normal=up,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_approximate_off"
+    },
+    "facing=south,normal=up,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_approximate_on"
+    },
+    "facing=south,normal=up,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_precise_off"
+    },
+    "facing=south,normal=up,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_precise_on"
+    },
+    "facing=south,normal=north,sensor=none": {
+      "model": "create_linear_engineering:block/screw_rail"
+    },
+    "facing=south,normal=north,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_approximate_off"
+    },
+    "facing=south,normal=north,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_approximate_on"
+    },
+    "facing=south,normal=north,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_precise_off"
+    },
+    "facing=south,normal=north,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_precise_on"
+    },
+    "facing=south,normal=south,sensor=none": {
+      "model": "create_linear_engineering:block/screw_rail"
+    },
+    "facing=south,normal=south,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_approximate_off"
+    },
+    "facing=south,normal=south,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_approximate_on"
+    },
+    "facing=south,normal=south,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_precise_off"
+    },
+    "facing=south,normal=south,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_precise_on"
+    },
+    "facing=south,normal=west,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_south_west"
+    },
+    "facing=south,normal=west,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_south_west_approximate_off"
+    },
+    "facing=south,normal=west,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_south_west_approximate_on"
+    },
+    "facing=south,normal=west,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_south_west_precise_off"
+    },
+    "facing=south,normal=west,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_south_west_precise_on"
+    },
+    "facing=south,normal=east,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_south_east"
+    },
+    "facing=south,normal=east,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_south_east_approximate_off"
+    },
+    "facing=south,normal=east,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_south_east_approximate_on"
+    },
+    "facing=south,normal=east,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_south_east_precise_off"
+    },
+    "facing=south,normal=east,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_south_east_precise_on"
+    },
+    "facing=west,normal=down,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_west_down"
+    },
+    "facing=west,normal=down,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_west_down_approximate_off"
+    },
+    "facing=west,normal=down,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_west_down_approximate_on"
+    },
+    "facing=west,normal=down,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_west_down_precise_off"
+    },
+    "facing=west,normal=down,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_west_down_precise_on"
+    },
+    "facing=west,normal=up,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_west_up"
+    },
+    "facing=west,normal=up,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_west_up_approximate_off"
+    },
+    "facing=west,normal=up,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_west_up_approximate_on"
+    },
+    "facing=west,normal=up,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_west_up_precise_off"
+    },
+    "facing=west,normal=up,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_west_up_precise_on"
+    },
+    "facing=west,normal=north,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_west_north"
+    },
+    "facing=west,normal=north,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_west_north_approximate_off"
+    },
+    "facing=west,normal=north,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_west_north_approximate_on"
+    },
+    "facing=west,normal=north,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_west_north_precise_off"
+    },
+    "facing=west,normal=north,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_west_north_precise_on"
+    },
+    "facing=west,normal=south,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_west_south"
+    },
+    "facing=west,normal=south,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_west_south_approximate_off"
+    },
+    "facing=west,normal=south,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_west_south_approximate_on"
+    },
+    "facing=west,normal=south,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_west_south_precise_off"
+    },
+    "facing=west,normal=south,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_west_south_precise_on"
+    },
+    "facing=west,normal=west,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_west_up"
+    },
+    "facing=west,normal=west,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_west_up_approximate_off"
+    },
+    "facing=west,normal=west,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_west_up_approximate_on"
+    },
+    "facing=west,normal=west,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_west_up_precise_off"
+    },
+    "facing=west,normal=west,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_west_up_precise_on"
+    },
+    "facing=west,normal=east,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_west_up"
+    },
+    "facing=west,normal=east,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_west_up_approximate_off"
+    },
+    "facing=west,normal=east,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_west_up_approximate_on"
+    },
+    "facing=west,normal=east,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_west_up_precise_off"
+    },
+    "facing=west,normal=east,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_west_up_precise_on"
+    },
+    "facing=east,normal=down,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_east_down"
+    },
+    "facing=east,normal=down,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_east_down_approximate_off"
+    },
+    "facing=east,normal=down,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_east_down_approximate_on"
+    },
+    "facing=east,normal=down,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_east_down_precise_off"
+    },
+    "facing=east,normal=down,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_east_down_precise_on"
+    },
+    "facing=east,normal=up,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_east_up"
+    },
+    "facing=east,normal=up,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_east_up_approximate_off"
+    },
+    "facing=east,normal=up,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_east_up_approximate_on"
+    },
+    "facing=east,normal=up,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_east_up_precise_off"
+    },
+    "facing=east,normal=up,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_east_up_precise_on"
+    },
+    "facing=east,normal=north,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_east_north"
+    },
+    "facing=east,normal=north,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_east_north_approximate_off"
+    },
+    "facing=east,normal=north,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_east_north_approximate_on"
+    },
+    "facing=east,normal=north,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_east_north_precise_off"
+    },
+    "facing=east,normal=north,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_east_north_precise_on"
+    },
+    "facing=east,normal=south,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_east_south"
+    },
+    "facing=east,normal=south,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_east_south_approximate_off"
+    },
+    "facing=east,normal=south,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_east_south_approximate_on"
+    },
+    "facing=east,normal=south,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_east_south_precise_off"
+    },
+    "facing=east,normal=south,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_east_south_precise_on"
+    },
+    "facing=east,normal=west,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_east_up"
+    },
+    "facing=east,normal=west,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_east_up_approximate_off"
+    },
+    "facing=east,normal=west,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_east_up_approximate_on"
+    },
+    "facing=east,normal=west,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_east_up_precise_off"
+    },
+    "facing=east,normal=west,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_east_up_precise_on"
+    },
+    "facing=east,normal=east,sensor=none": {
+      "model": "create_linear_engineering:block/oriented/screw_rail_east_up"
+    },
+    "facing=east,normal=east,sensor=approximate,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_east_up_approximate_off"
+    },
+    "facing=east,normal=east,sensor=approximate,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_east_up_approximate_on"
+    },
+    "facing=east,normal=east,sensor=precise,powered=false": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_east_up_precise_off"
+    },
+    "facing=east,normal=east,sensor=precise,powered=true": {
+      "model": "create_linear_engineering:block/sensors/screw_rail_east_up_precise_on"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"type":"minecraft:crafting_shaped","category":"building","pattern":["ABA"," S "],"key":{"A":{"item":"create:andesite_alloy"},"B":{"item":"create:brass_ingot"},"S":{"item":"create:shaft"}},"result":{"id":"create_linear_engineering:linear_carriage","count":1}}

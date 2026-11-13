@@ -1,0 +1,6 @@
+{
+  "parent": "create_linear_engineering:block/oriented/screw_rail_down_south",
+  "textures": {
+    "surface": "create_linear_engineering:block/rail_sensor_precise_on"
+  }
+}

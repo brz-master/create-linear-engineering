@@ -1,0 +1,33 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+[[mods]]
+modId="create_linear_engineering"
+version="0.8.3"
+displayName="Create: Linear Engineering"
+authors="brz-master"
+description='''Original linear rails and Sable-native physics carriages.'''
+[[dependencies.create_linear_engineering]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.259,21.2)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.create_linear_engineering]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1]"
+ordering="NONE"
+side="BOTH"
+[[dependencies.create_linear_engineering]]
+modId="sable"
+type="required"
+versionRange="[2.0.5,2.0.6)"
+ordering="AFTER"
+side="BOTH"
+[[dependencies.create_linear_engineering]]
+modId="create"
+type="required"
+versionRange="[6.0.10,6.1)"
+ordering="AFTER"
+side="BOTH"

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    " R ",
+    "ABA"
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "A": {
+      "item": "create:andesite_alloy"
+    },
+    "B": {
+      "item": "minecraft:quartz"
+    }
+  },
+  "result": {
+    "id": "create_linear_engineering:rail_sensor",
+    "count": 2
+  }
+}

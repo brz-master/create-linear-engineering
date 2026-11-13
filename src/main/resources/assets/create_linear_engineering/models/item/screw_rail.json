@@ -1,0 +1,218 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "surface": "create_linear_engineering:block/linear_rail",
+    "particle": "create_linear_engineering:block/linear_rail",
+    "screw": "create_linear_engineering:block/screw_shaft"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        4,
+        16
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            0.0,
+            0.0,
+            8.0,
+            8.0
+          ],
+          "texture": "#surface"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            8.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#surface"
+        },
+        "north": {
+          "uv": [
+            0.0,
+            14.0,
+            8.0,
+            16.0
+          ],
+          "texture": "#surface"
+        },
+        "south": {
+          "uv": [
+            0.0,
+            14.0,
+            8.0,
+            16.0
+          ],
+          "texture": "#surface"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            6.0,
+            16.0,
+            8.0
+          ],
+          "texture": "#surface"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            6.0,
+            16.0,
+            8.0
+          ],
+          "texture": "#surface"
+        }
+      }
+    },
+    {
+      "from": [
+        6,
+        4,
+        0
+      ],
+      "to": [
+        10,
+        5,
+        16
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            3.0,
+            0.0,
+            5.0,
+            8.0
+          ],
+          "texture": "#surface"
+        },
+        "down": {
+          "uv": [
+            11.0,
+            8.0,
+            13.0,
+            16.0
+          ],
+          "texture": "#surface"
+        },
+        "north": {
+          "uv": [
+            3.0,
+            13.5,
+            5.0,
+            14.0
+          ],
+          "texture": "#surface"
+        },
+        "south": {
+          "uv": [
+            3.0,
+            13.5,
+            5.0,
+            14.0
+          ],
+          "texture": "#surface"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            5.5,
+            16.0,
+            6.0
+          ],
+          "texture": "#surface"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            5.5,
+            16.0,
+            6.0
+          ],
+          "texture": "#surface"
+        }
+      }
+    },
+    {
+      "from": [
+        6,
+        6,
+        0
+      ],
+      "to": [
+        10,
+        10,
+        16
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            0,
+            0,
+            2,
+            8
+          ],
+          "texture": "#screw",
+          "rotation": 180
+        },
+        "east": {
+          "uv": [
+            2,
+            0,
+            4,
+            8
+          ],
+          "texture": "#screw",
+          "rotation": 270
+        },
+        "down": {
+          "uv": [
+            4,
+            0,
+            6,
+            8
+          ],
+          "texture": "#screw"
+        },
+        "west": {
+          "uv": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "texture": "#screw",
+          "rotation": 90
+        },
+        "south": {
+          "uv": [
+            0,
+            8,
+            2,
+            10
+          ],
+          "texture": "#screw"
+        },
+        "north": {
+          "uv": [
+            0,
+            8,
+            2,
+            10
+          ],
+          "texture": "#screw",
+          "rotation": 180
+        }
+      }
+    }
+  ]
+}

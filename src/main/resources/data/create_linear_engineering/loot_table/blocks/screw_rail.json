@@ -1,0 +1,52 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "create_linear_engineering:screw_rail"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "create_linear_engineering:rail_sensor"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        },
+        {
+          "condition": "minecraft:any_of",
+          "terms": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "create_linear_engineering:screw_rail",
+              "properties": {
+                "sensor": "approximate"
+              }
+            },
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "create_linear_engineering:screw_rail",
+              "properties": {
+                "sensor": "precise"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

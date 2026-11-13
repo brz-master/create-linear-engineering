@@ -1,0 +1,77 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "surface": "create_linear_engineering:block/screw_shaft",
+    "particle": "create_linear_engineering:block/screw_shaft"
+  },
+  "elements": [
+    {
+      "from": [
+        6,
+        0,
+        6
+      ],
+      "to": [
+        10,
+        16,
+        10
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            2,
+            8
+          ],
+          "texture": "#surface"
+        },
+        "east": {
+          "uv": [
+            2,
+            0,
+            4,
+            8
+          ],
+          "texture": "#surface"
+        },
+        "south": {
+          "uv": [
+            4,
+            0,
+            6,
+            8
+          ],
+          "texture": "#surface"
+        },
+        "west": {
+          "uv": [
+            6,
+            0,
+            8,
+            8
+          ],
+          "texture": "#surface"
+        },
+        "up": {
+          "uv": [
+            0,
+            8,
+            2,
+            10
+          ],
+          "texture": "#surface"
+        },
+        "down": {
+          "uv": [
+            0,
+            8,
+            2,
+            10
+          ],
+          "texture": "#surface"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.141'
+}
+version = '0.8.3'
+group = 'io.github.brzmaster'
+base { archivesName = 'create-linear-engineering' }
+java { toolchain.languageVersion = JavaLanguageVersion.of(21); withSourcesJar() }
+sourceSets { gameTest }
+configurations.gameTestImplementation.extendsFrom(configurations.implementation)
+configurations.gameTestCompileOnly.extendsFrom(configurations.compileOnly)
+repositories {
+    mavenCentral()
+    maven { url = 'https://api.modrinth.com/maven' }
+    maven { url = 'https://maven.createmod.net' }
+    maven { url = 'https://maven.tterrag.com' }
+    maven { url = 'https://maven.ithundxr.dev/hidden' }
+    maven { url = 'https://maven.ithundxr.dev/snapshots' }
+    maven { url = 'https://maven.ryanhcode.dev/releases' }
+}
+neoForge {
+    version = '21.1.259'
+    runs {
+        client { client(); gameDirectory = file('run/client') }
+        server { server(); programArgument '--nogui'; gameDirectory = file('run/server') }
+        gameTestServer {
+            type = 'gameTestServer'
+            gameDirectory = file('run/gametest')
+            systemProperty 'neoforge.enabledGameTestNamespaces', 'create_linear_engineering'
+        }
+    }
+    mods { create_linear_engineering { sourceSet sourceSets.main } }
+}
+neoForge.addModdingDependenciesTo(sourceSets.gameTest)
+neoForge.mods.create_linear_engineering.sourceSet(sourceSets.gameTest)
+dependencies {
+    gameTestImplementation sourceSets.main.output
+    implementation('maven.modrinth:sable:U678xqle') { transitive = false }
+    compileOnly 'dev.ryanhcode.sable-companion:sable-companion-common-1.21.1:1.6.0'
+    implementation('com.simibubi.create:create-1.21.1:6.0.10-280') { transitive = false }
+    implementation 'net.createmod.ponder:ponder-neoforge:1.0.82+mc1.21.1'
+    implementation 'com.tterrag.registrate:Registrate:MC1.21-1.3.0+67'
+    implementation 'dev.engine-room.flywheel:flywheel-neoforge-1.21.1:1.0.6'
+}
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+tasks.register('resetGameTestWorld') {
+    doLast {
+        def testDirectory = file('run/gametest').canonicalFile
+        def world = new File(testDirectory, 'world').canonicalFile
+        if (world.parentFile != testDirectory) throw new GradleException('Unsafe GameTest world path')
+        delete world
+    }
+}
+tasks.named('runGameTestServer') { dependsOn 'resetGameTestWorld' }

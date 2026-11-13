@@ -1,0 +1,226 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "surface": "create_linear_engineering:block/linear_carriage",
+    "particle": "create_linear_engineering:block/linear_carriage",
+    "lining": "create_linear_engineering:block/carriage_lining_none"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        4
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0.0,
+            0.0,
+            8.0,
+            8.0
+          ],
+          "texture": "#surface"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            8.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#lining",
+          "rotation": 180
+        },
+        "up": {
+          "uv": [
+            0.0,
+            8.0,
+            8.0,
+            10.0
+          ],
+          "texture": "#surface"
+        },
+        "down": {
+          "uv": [
+            0.0,
+            8.0,
+            8.0,
+            10.0
+          ],
+          "texture": "#surface",
+          "rotation": 180
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            16.0,
+            2.0
+          ],
+          "texture": "#surface",
+          "rotation": 90
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            16.0,
+            2.0
+          ],
+          "texture": "#surface",
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "from": [
+        10,
+        0,
+        4
+      ],
+      "to": [
+        16,
+        16,
+        12
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0.0,
+            0.0,
+            3.0,
+            8.0
+          ],
+          "texture": "#surface"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            8.0,
+            11.0,
+            16.0
+          ],
+          "texture": "#lining",
+          "rotation": 180
+        },
+        "up": {
+          "uv": [
+            0.0,
+            10.0,
+            3.0,
+            14.0
+          ],
+          "texture": "#surface"
+        },
+        "down": {
+          "uv": [
+            0.0,
+            10.0,
+            3.0,
+            14.0
+          ],
+          "texture": "#surface",
+          "rotation": 180
+        },
+        "east": {
+          "uv": [
+            8.0,
+            2.0,
+            16.0,
+            6.0
+          ],
+          "texture": "#surface",
+          "rotation": 90
+        },
+        "west": {
+          "uv": [
+            8.0,
+            2.0,
+            16.0,
+            6.0
+          ],
+          "texture": "#lining",
+          "rotation": 270
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        4
+      ],
+      "to": [
+        6,
+        16,
+        12
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            5.0,
+            0.0,
+            8.0,
+            8.0
+          ],
+          "texture": "#surface"
+        },
+        "south": {
+          "uv": [
+            13.0,
+            8.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#lining",
+          "rotation": 180
+        },
+        "up": {
+          "uv": [
+            5.0,
+            10.0,
+            8.0,
+            14.0
+          ],
+          "texture": "#surface"
+        },
+        "down": {
+          "uv": [
+            5.0,
+            10.0,
+            8.0,
+            14.0
+          ],
+          "texture": "#surface",
+          "rotation": 180
+        },
+        "east": {
+          "uv": [
+            8.0,
+            2.0,
+            16.0,
+            6.0
+          ],
+          "texture": "#lining",
+          "rotation": 90
+        },
+        "west": {
+          "uv": [
+            8.0,
+            2.0,
+            16.0,
+            6.0
+          ],
+          "texture": "#surface",
+          "rotation": 270
+        }
+      }
+    }
+  ]
+}

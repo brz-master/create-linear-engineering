@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "create_linear_engineering:item/high_viscosity_grease"
+  }
+}

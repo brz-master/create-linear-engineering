@@ -1,0 +1,328 @@
+{
+  "variants": {
+    "facing=down,normal=down,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_down_south"
+    },
+    "facing=down,normal=down,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_down_south_low"
+    },
+    "facing=down,normal=down,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_down_south_high"
+    },
+    "facing=down,normal=up,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_down_south"
+    },
+    "facing=down,normal=up,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_down_south_low"
+    },
+    "facing=down,normal=up,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_down_south_high"
+    },
+    "facing=down,normal=north,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_down_north"
+    },
+    "facing=down,normal=north,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_down_north_low"
+    },
+    "facing=down,normal=north,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_down_north_high"
+    },
+    "facing=down,normal=south,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_down_south"
+    },
+    "facing=down,normal=south,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_down_south_low"
+    },
+    "facing=down,normal=south,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_down_south_high"
+    },
+    "facing=down,normal=west,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_down_west"
+    },
+    "facing=down,normal=west,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_down_west_low"
+    },
+    "facing=down,normal=west,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_down_west_high"
+    },
+    "facing=down,normal=east,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_down_east"
+    },
+    "facing=down,normal=east,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_down_east_low"
+    },
+    "facing=down,normal=east,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_down_east_high"
+    },
+    "facing=up,normal=down,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_up_north"
+    },
+    "facing=up,normal=down,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_up_north_low"
+    },
+    "facing=up,normal=down,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_up_north_high"
+    },
+    "facing=up,normal=up,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_up_north"
+    },
+    "facing=up,normal=up,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_up_north_low"
+    },
+    "facing=up,normal=up,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_up_north_high"
+    },
+    "facing=up,normal=north,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_up_north"
+    },
+    "facing=up,normal=north,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_up_north_low"
+    },
+    "facing=up,normal=north,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_up_north_high"
+    },
+    "facing=up,normal=south,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_up_south"
+    },
+    "facing=up,normal=south,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_up_south_low"
+    },
+    "facing=up,normal=south,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_up_south_high"
+    },
+    "facing=up,normal=west,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_up_west"
+    },
+    "facing=up,normal=west,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_up_west_low"
+    },
+    "facing=up,normal=west,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_up_west_high"
+    },
+    "facing=up,normal=east,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_up_east"
+    },
+    "facing=up,normal=east,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_up_east_low"
+    },
+    "facing=up,normal=east,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_up_east_high"
+    },
+    "facing=north,normal=down,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_north_down"
+    },
+    "facing=north,normal=down,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_north_down_low"
+    },
+    "facing=north,normal=down,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_north_down_high"
+    },
+    "facing=north,normal=up,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_north_up"
+    },
+    "facing=north,normal=up,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_north_up_low"
+    },
+    "facing=north,normal=up,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_north_up_high"
+    },
+    "facing=north,normal=north,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_north_up"
+    },
+    "facing=north,normal=north,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_north_up_low"
+    },
+    "facing=north,normal=north,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_north_up_high"
+    },
+    "facing=north,normal=south,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_north_up"
+    },
+    "facing=north,normal=south,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_north_up_low"
+    },
+    "facing=north,normal=south,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_north_up_high"
+    },
+    "facing=north,normal=west,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_north_west"
+    },
+    "facing=north,normal=west,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_north_west_low"
+    },
+    "facing=north,normal=west,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_north_west_high"
+    },
+    "facing=north,normal=east,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_north_east"
+    },
+    "facing=north,normal=east,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_north_east_low"
+    },
+    "facing=north,normal=east,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_north_east_high"
+    },
+    "facing=south,normal=down,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_south_down"
+    },
+    "facing=south,normal=down,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_south_down_low"
+    },
+    "facing=south,normal=down,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_south_down_high"
+    },
+    "facing=south,normal=up,grease=none": {
+      "model": "create_linear_engineering:block/screw_carriage"
+    },
+    "facing=south,normal=up,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_low"
+    },
+    "facing=south,normal=up,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_high"
+    },
+    "facing=south,normal=north,grease=none": {
+      "model": "create_linear_engineering:block/screw_carriage"
+    },
+    "facing=south,normal=north,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_low"
+    },
+    "facing=south,normal=north,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_high"
+    },
+    "facing=south,normal=south,grease=none": {
+      "model": "create_linear_engineering:block/screw_carriage"
+    },
+    "facing=south,normal=south,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_low"
+    },
+    "facing=south,normal=south,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_high"
+    },
+    "facing=south,normal=west,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_south_west"
+    },
+    "facing=south,normal=west,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_south_west_low"
+    },
+    "facing=south,normal=west,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_south_west_high"
+    },
+    "facing=south,normal=east,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_south_east"
+    },
+    "facing=south,normal=east,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_south_east_low"
+    },
+    "facing=south,normal=east,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_south_east_high"
+    },
+    "facing=west,normal=down,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_west_down"
+    },
+    "facing=west,normal=down,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_west_down_low"
+    },
+    "facing=west,normal=down,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_west_down_high"
+    },
+    "facing=west,normal=up,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_west_up"
+    },
+    "facing=west,normal=up,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_west_up_low"
+    },
+    "facing=west,normal=up,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_west_up_high"
+    },
+    "facing=west,normal=north,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_west_north"
+    },
+    "facing=west,normal=north,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_west_north_low"
+    },
+    "facing=west,normal=north,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_west_north_high"
+    },
+    "facing=west,normal=south,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_west_south"
+    },
+    "facing=west,normal=south,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_west_south_low"
+    },
+    "facing=west,normal=south,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_west_south_high"
+    },
+    "facing=west,normal=west,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_west_up"
+    },
+    "facing=west,normal=west,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_west_up_low"
+    },
+    "facing=west,normal=west,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_west_up_high"
+    },
+    "facing=west,normal=east,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_west_up"
+    },
+    "facing=west,normal=east,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_west_up_low"
+    },
+    "facing=west,normal=east,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_west_up_high"
+    },
+    "facing=east,normal=down,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_east_down"
+    },
+    "facing=east,normal=down,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_east_down_low"
+    },
+    "facing=east,normal=down,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_east_down_high"
+    },
+    "facing=east,normal=up,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_east_up"
+    },
+    "facing=east,normal=up,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_east_up_low"
+    },
+    "facing=east,normal=up,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_east_up_high"
+    },
+    "facing=east,normal=north,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_east_north"
+    },
+    "facing=east,normal=north,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_east_north_low"
+    },
+    "facing=east,normal=north,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_east_north_high"
+    },
+    "facing=east,normal=south,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_east_south"
+    },
+    "facing=east,normal=south,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_east_south_low"
+    },
+    "facing=east,normal=south,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_east_south_high"
+    },
+    "facing=east,normal=west,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_east_up"
+    },
+    "facing=east,normal=west,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_east_up_low"
+    },
+    "facing=east,normal=west,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_east_up_high"
+    },
+    "facing=east,normal=east,grease=none": {
+      "model": "create_linear_engineering:block/oriented/screw_carriage_east_up"
+    },
+    "facing=east,normal=east,grease=low": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_east_up_low"
+    },
+    "facing=east,normal=east,grease=high": {
+      "model": "create_linear_engineering:block/greased/screw_carriage_east_up_high"
+    }
+  }
+}

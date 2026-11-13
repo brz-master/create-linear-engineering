@@ -1,0 +1,7 @@
+{
+  "parent": "create_linear_engineering:block/screw_carriage",
+  "textures": {
+    "lining": "create_linear_engineering:block/carriage_lining_low",
+    "surface": "create_linear_engineering:block/carriage_surface_low"
+  }
+}

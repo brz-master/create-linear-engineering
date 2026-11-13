@@ -1,0 +1,1 @@
+{"type": "minecraft:crafting_shapeless", "category": "building", "ingredients": [{"item": "create_linear_engineering:linear_rail"}, {"item": "create:shaft"}], "result": {"id": "create_linear_engineering:screw_rail", "count": 1}}

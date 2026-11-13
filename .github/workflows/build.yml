@@ -1,0 +1,33 @@
+name: Build and native physics tests
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Build and test with shutdown diagnostics
+        run: |
+          (
+            sleep 150
+            for task_pid in $(jps -q); do
+              jcmd "$task_pid" Thread.print || true
+            done
+          ) &
+          diagnostic_pid=$!
+          trap 'kill "$diagnostic_pid" 2>/dev/null || true' EXIT
+          timeout --kill-after=10s 4m ./gradlew build runGameTestServer --console plain
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: build-and-physics-evidence
+          path: |
+            build/libs/*.jar
+            run/gametest/logs/*.log

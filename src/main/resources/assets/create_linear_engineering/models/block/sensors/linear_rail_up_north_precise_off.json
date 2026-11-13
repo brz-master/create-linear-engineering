@@ -1,0 +1,6 @@
+{
+  "parent": "create_linear_engineering:block/oriented/linear_rail_up_north",
+  "textures": {
+    "surface": "create_linear_engineering:block/rail_sensor_precise_off"
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "surface": "create_linear_engineering:block/linear_rail",
+    "particle": "create_linear_engineering:block/linear_rail"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        4,
+        16
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            0.0,
+            0.0,
+            8.0,
+            8.0
+          ],
+          "texture": "#surface",
+          "rotation": 270
+        },
+        "down": {
+          "uv": [
+            8.0,
+            8.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#surface",
+          "rotation": 90
+        },
+        "west": {
+          "uv": [
+            0.0,
+            14.0,
+            8.0,
+            16.0
+          ],
+          "texture": "#surface"
+        },
+        "east": {
+          "uv": [
+            0.0,
+            14.0,
+            8.0,
+            16.0
+          ],
+          "texture": "#surface"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            6.0,
+            16.0,
+            8.0
+          ],
+          "texture": "#surface"
+        },
+        "north": {
+          "uv": [
+            8.0,
+            6.0,
+            16.0,
+            8.0
+          ],
+          "texture": "#surface"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        4,
+        6
+      ],
+      "to": [
+        16,
+        5,
+        10
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            3.0,
+            0.0,
+            5.0,
+            8.0
+          ],
+          "texture": "#surface",
+          "rotation": 270
+        },
+        "down": {
+          "uv": [
+            11.0,
+            8.0,
+            13.0,
+            16.0
+          ],
+          "texture": "#surface",
+          "rotation": 90
+        },
+        "west": {
+          "uv": [
+            3.0,
+            13.5,
+            5.0,
+            14.0
+          ],
+          "texture": "#surface"
+        },
+        "east": {
+          "uv": [
+            3.0,
+            13.5,
+            5.0,
+            14.0
+          ],
+          "texture": "#surface"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            5.5,
+            16.0,
+            6.0
+          ],
+          "texture": "#surface"
+        },
+        "north": {
+          "uv": [
+            8.0,
+            5.5,
+            16.0,
+            6.0
+          ],
+          "texture": "#surface"
+        }
+      }
+    }
+  ]
+}
