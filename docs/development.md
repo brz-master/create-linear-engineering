@@ -18,7 +18,7 @@ Use `./gradlew` on Linux and macOS. `build/libs/` contains the mod and sources J
 |---|---|
 | `src/main/java/` | Registrations, blocks, items, body lifecycle, native physics integration and client tutorials. |
 | `src/main/resources/` | Metadata, English text, recipes, loot, tags, models, textures and Ponder structures. |
-| `src/gameTest/` | 107 integration tests with the real Sable/Rapier backend. |
+| `src/gameTest/` | 111 integration tests with the real Sable/Rapier backend. |
 | `tools/art/` | Reproducible pixel textures, model generators and documentation renderers. |
 | `tools/generate_ponder.py` | Ponder baseplate and English storyboard entries extracted from Java scenes. |
 | `docs/` | Product specifications, stress formulas and generated renders. |
@@ -48,6 +48,6 @@ Documentation images are renders of the actual distributed models and textures, 
 
 The CI workflow builds and runs the native suite on Java 21, with bounded runtime and thread diagnostics for stalled shutdowns. Uploaded artifacts include JARs and GameTest logs.
 
-Physics fixtures wait for normal chunk ticking and kinetic-network readiness. They exercise the real event dispatch, body assembly and solver rather than manually calling production ticks or replacing physics with mocks. Fixtures run near the origin to avoid distant-coordinate precision effects.
+Physics fixtures wait for normal chunk ticking and kinetic-network readiness. They exercise the real event dispatch, body assembly and solver rather than manually calling production ticks or replacing physics with mocks. Slow screw fixtures also run at distant coordinates to exercise native position rounding in both travel directions.
 
 When changing registry names, inspect JSON references, tags, recipes, language keys, Ponder structures, test templates and the namespace configured for GameTest discovery. A metadata-only build does not establish world migration compatibility.

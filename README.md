@@ -2,7 +2,7 @@
 
 Build sliding doors, lifts and moving machinery with physical carriages, linear guides and Create-powered lead screws. Sable handles rigid bodies, mass, gravity and collisions; Create supplies rotation, stress networks and placement assistance.
 
-**Version 0.8.3 · Minecraft 1.21.1 · NeoForge · Java 21**
+**Version 0.8.4 · Minecraft 1.21.1 · NeoForge · Java 21**
 
 ![Linear rails and carriages](docs/renders/final-blocks.png)
 
@@ -20,7 +20,7 @@ Install the mod on **both the client and the server**, together with its require
 
 Install the dependencies required by Create and Sable as well. These dependencies are not bundled in this mod. Aeronautics is not a direct requirement. Compatibility ranges in the metadata are not a claim that every version or modpack combination has been tested.
 
-The file is `create-linear-engineering-0.8.3.jar`. The registry namespace is `create_linear_engineering`. This is a distinct mod identity: blocks and items saved under a different namespace are not automatically converted. Back up existing worlds before changing their installed mods.
+The file is `create-linear-engineering-0.8.4.jar`. The registry namespace is `create_linear_engineering`. This is a distinct mod identity: blocks and items saved under a different namespace are not automatically converted. Back up existing worlds before changing their installed mods.
 
 ## Blocks and items
 
@@ -114,7 +114,7 @@ With JDK 21 installed:
 
 On Linux or macOS, use `./gradlew`. Distribution and source JARs are written to `build/libs/`. GameTest sources are separate from the distributed mod.
 
-The integration suite contains **107 native GameTests**, using Sable and Rapier rather than mocked physics. It covers all mounting orientations, gravity, friction, impacts, open ends, re-entry, moving parents, transfers, joining, persistence, protection events, sensors and kinetic stress. The generated `run/gametest/world` is recreated before each test run. CI builds and runs the suite with Java 21.
+The integration suite contains **111 native GameTests**, using Sable and Rapier rather than mocked physics. It covers all mounting orientations, gravity, friction, impacts, open ends, re-entry, moving parents, transfers, joining, persistence, protection events, sensors and kinetic stress. The generated `run/gametest/world` is recreated before each test run. CI builds and runs the suite with Java 21.
 
 See the [technical specification](docs/technical-specification.md), [development guide](docs/development.md) and [changelog](CHANGELOG.md).
 

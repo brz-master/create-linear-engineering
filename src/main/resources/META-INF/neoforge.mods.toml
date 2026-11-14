@@ -3,7 +3,7 @@ loaderVersion="[4,)"
 license="MIT"
 [[mods]]
 modId="create_linear_engineering"
-version="0.8.3"
+version="0.8.4"
 displayName="Create: Linear Engineering"
 authors="brz-master"
 description='''Original linear rails and Sable-native physics carriages.'''

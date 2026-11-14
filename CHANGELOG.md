@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.4
+
+- Fixed toothed carriages stalling at low RPM on rotating screw rails away from the world origin. The drive retains fractional travel between physics steps, with bounded correction during contact and immediate reset on stop or reversal.
+
 ## 0.8.3
 
 - Introduced the Create: Linear Engineering project identity, artifact name and `create_linear_engineering` namespace.

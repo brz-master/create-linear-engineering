@@ -33,6 +33,45 @@ public final class ScrewMotionTests {
         steadyVelocity(h, 191, 256);
     }
 
+    @GameTest(template = "empty", timeoutTicks = 360)
+    public static void slowScrewKeepsPitchNearOrigin(GameTestHelper h) {
+        slowTravel(h, 8, 1);
+    }
+
+    @GameTest(template = "empty", timeoutTicks = 360)
+    public static void slowScrewKeepsPitchAtDistance(GameTestHelper h) {
+        slowTravel(h, 8192, 1);
+    }
+
+    @GameTest(template = "empty", timeoutTicks = 360)
+    public static void slowScrewKeepsPitchInReverseAtDistance(GameTestHelper h) {
+        slowTravel(h, -8192, -4);
+    }
+
+    @GameTest(template = "empty", timeoutTicks = 360)
+    public static void slowScrewKeepsPitchFurtherFromOrigin(GameTestHelper h) {
+        slowTravel(h, 32768, 4);
+    }
+
+    private static void slowTravel(GameTestHelper h, int z, int rpm) {
+        Fixture fixture = fixture(h, new BlockPos(-8, 100, z), rpm, 8);
+        BlockPos rail = fixture.origin().south(3);
+        awaitNetwork(h, java.util.List.of(rail), rpm, () -> {
+            ServerSubLevel body = CarriagePlacement.place(h.getLevel(), rail);
+            h.assertTrue(body != null, "Cannot install carriage on rotating screw");
+            double start = anchor(body).z;
+            h.runAfterDelay(200, () -> {
+                assertRpm(h, rail, rpm);
+                double actual = anchor(body).z - start;
+                double expected = rpm * ScrewDrive.PITCH / 6d;
+                LOGGER.info("Low-speed screw at Z={} RPM={} travel={} expected={}", z, rpm, actual, expected);
+                h.assertTrue(entity(body).hasJoint() && Math.abs(actual - expected) < Math.abs(expected) * .15,
+                        "Incorrect low-speed travel at Z=" + z + " RPM=" + rpm + ": " + actual + " vs " + expected);
+                h.succeed();
+            });
+        });
+    }
+
     private static void steadyVelocity(GameTestHelper h, int index, int rpm) {
         Fixture fixture = fixture(h, index, rpm, 40);
         awaitNetwork(h, java.util.stream.IntStream.range(-2, 40).mapToObj(fixture.origin()::south).toList(), rpm, () -> {
@@ -171,7 +210,10 @@ public final class ScrewMotionTests {
     private record Fixture(BlockPos origin, CreativeMotorBlockEntity motor) {}
 
     private static Fixture fixture(GameTestHelper h, int index, int rpm, int length) {
-        BlockPos origin = new BlockPos(index * 48 + 8, 100, 8);
+        return fixture(h, new BlockPos(index * 48 + 8, 100, 8), rpm, length);
+    }
+
+    private static Fixture fixture(GameTestHelper h, BlockPos origin, int rpm, int length) {
         for (int i = 0; i < length; i++) {
             BlockPos pos = origin.south(i);
             h.getLevel().getChunk(pos);
