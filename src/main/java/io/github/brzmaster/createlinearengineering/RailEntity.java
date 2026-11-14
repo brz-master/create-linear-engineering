@@ -91,9 +91,11 @@ public final class RailEntity extends com.simibubi.create.content.kinetics.base.
     }
     public void refreshBindings() {
         finishMove();
-        refreshReferences();
+        refreshReferences(null, null);
     }
-    private void refreshReferences() {
+    // Only transfer and rollback may rebind a child, and only from the known
+    // endpoint of that move. Ordinary ticks discard obsolete reverse links.
+    void refreshReferences(SubLevel previousParent, BlockPos previousRail) {
         if (!(level instanceof ServerLevel server) || children.isEmpty()) return;
         var container = SubLevelContainer.getContainer(server);
         if (container == null) return;
@@ -101,6 +103,8 @@ public final class RailEntity extends com.simibubi.create.content.kinetics.base.
         boolean changed = children.removeIf(entry -> {
             if (!(container.getSubLevel(entry.child()) instanceof ServerSubLevel child) || child == parent) return false;
             if (!(server.getBlockEntity(child.getPlot().getCenterBlock().offset(entry.offset())) instanceof CarriageEntity carriage) || !carriage.isBound()) return true;
+            if (carriage.references(parent, worldPosition)) return false;
+            if (previousRail == null || !carriage.references(previousParent, previousRail)) return true;
             carriage.bind(parent, worldPosition);
             return false;
         });
@@ -119,6 +123,7 @@ public final class RailEntity extends com.simibubi.create.content.kinetics.base.
         frame.position().set(globalAnchor(oldParent, oldPos));
         frame.orientation().set(RailGeometry.frame(oldState));
         if (oldParent != null) frame.orientation().premul(oldParent.logicalPose().orientation());
+        refreshReferences(oldParent, oldPos);
         List<BodySnapshot> snapshots = new ArrayList<>();
         ArrayDeque<UUID> pending = new ArrayDeque<>();
         for (Link link : children) pending.add(link.child());
@@ -135,7 +140,6 @@ public final class RailEntity extends com.simibubi.create.content.kinetics.base.
             }
         }
         pendingMove = new PendingMove(frame, snapshots);
-        refreshReferences();
         setChanged();
     }
     /** Use absolute snapshots: overlapping rails set the same target instead of

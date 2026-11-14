@@ -138,6 +138,9 @@ public final class CouplingAndReentryTests {
         ServerSubLevel a = CarriagePlacement.place(h.getLevel(), low), b = CarriagePlacement.place(h.getLevel(), high);
         BlockPos start = b.getPlot().getCenterBlock(), end = a.getPlot().getCenterBlock().above(4);
         h.getLevel().setBlock(start.above(), Blocks.STONE.defaultBlockState(), 3);
+        BlockPos innerGuide = start.east();
+        h.getLevel().setBlock(innerGuide, CreateLinearEngineering.SCREW_RAIL.get().defaultBlockState(), 3);
+        var externalChild = CarriagePlacement.place(h.getLevel(), innerGuide);
         BlockPos chest = start.above(2);
         h.getLevel().setBlock(chest, Blocks.CHEST.defaultBlockState(), 3);
         ((net.minecraft.world.level.block.entity.ChestBlockEntity) h.getLevel().getBlockEntity(chest))
@@ -150,8 +153,10 @@ public final class CouplingAndReentryTests {
                 return super.apply(state);
             }
         };
-        h.assertTrue(!BodyTransfer.move(h.getLevel(), b, a, transform, java.util.List.of(start, chest, start.above()), b.getPlot().getBoundingBox()),
+        h.assertTrue(!BodyTransfer.move(h.getLevel(), b, a, transform, java.util.List.of(start, innerGuide, chest, start.above()), b.getPlot().getBoundingBox()),
                 "Native swallowed failure was reported as success");
+        var descendant = carriage(externalChild, externalChild.getPlot().getCenterBlock());
+        h.assertTrue(descendant.references(b, innerGuide), "Rollback did not immediately restore descendant ownership");
         h.assertTrue(h.getLevel().getEntitiesOfClass(net.minecraft.world.entity.item.ItemEntity.class,
                 new net.minecraft.world.phys.AABB(end).expandTowards(0, 3, 0).inflate(2)).isEmpty(),
                 "Rollback duplicated inventory as dropped items");
@@ -164,6 +169,8 @@ public final class CouplingAndReentryTests {
             h.assertTrue(restoredChest != null && restoredChest.getItem(0).is(net.minecraft.world.item.Items.DIAMOND)
                     && restoredChest.getItem(0).getCount() == 37, "Rollback lost source inventory");
             h.assertTrue(carriage(b, start).hasJoint(), "Rollback lost original rail constraint");
+            h.assertTrue(descendant.hasJoint() && descendant.references(b, innerGuide),
+                    "Rollback lost the carriage guided by a transferred rail");
             h.succeed();
         });
     }

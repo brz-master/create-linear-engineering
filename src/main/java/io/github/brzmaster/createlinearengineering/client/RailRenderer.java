@@ -3,7 +3,12 @@ package io.github.brzmaster.createlinearengineering.client;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.simibubi.create.content.kinetics.base.KineticBlockEntityRenderer;
 import com.simibubi.create.foundation.blockEntity.renderer.SafeBlockEntityRenderer;
+import com.simibubi.create.content.kinetics.base.SingleAxisRotatingVisual;
+import dev.engine_room.flywheel.lib.model.Models;
 import dev.engine_room.flywheel.lib.model.baked.PartialModel;
+import dev.engine_room.flywheel.lib.visualization.SimpleBlockEntityVisualizer;
+import dev.engine_room.flywheel.api.visualization.VisualizationManager;
+import net.minecraft.world.phys.Vec3;
 import io.github.brzmaster.createlinearengineering.CreateLinearEngineering;
 import io.github.brzmaster.createlinearengineering.LinearBlock;
 import io.github.brzmaster.createlinearengineering.RailEntity;
@@ -17,11 +22,21 @@ import net.minecraft.resources.ResourceLocation;
 /** Only moving geometry belongs here; rail and sensor use vanilla baked models. */
 public final class RailRenderer extends SafeBlockEntityRenderer<RailEntity> {
     private static final PartialModel SHAFT = PartialModel.of(ResourceLocation.fromNamespaceAndPath(CreateLinearEngineering.ID, "block/screw_shaft"));
-    public static void init() {} // Register the partial before model baking.
+    static void registerVisual() {
+        SimpleBlockEntityVisualizer.builder(CreateLinearEngineering.RAIL_ENTITY.get())
+                .factory((context, rail, partialTick) -> LinearBlock.isScrew(rail.getBlockState())
+                        ? new SingleAxisRotatingVisual<>(context, rail, partialTick, Models.partial(SHAFT)) : null)
+                .apply();
+    }
+
+    @Override public boolean shouldRender(RailEntity rail, Vec3 camera) {
+        // The visible chunk (or Sable plot) already culls the fixed rail mesh.
+        return LinearBlock.isScrew(rail.getBlockState());
+    }
     public RailRenderer(BlockEntityRendererProvider.Context context) {}
     @Override protected void renderSafe(RailEntity entity, float partialTicks, PoseStack pose, MultiBufferSource buffers, int light, int overlay) {
         var state = entity.getBlockState();
-        if (!LinearBlock.isScrew(state)) return;
+        if (!LinearBlock.isScrew(state) || VisualizationManager.supportsVisualization(entity.getLevel())) return;
         var axis = entity.getBlockState().getValue(LinearBlock.FACING).getAxis();
         var model = CachedBuffers.partialFacingVertical(SHAFT, entity.getBlockState(), Direction.get(Direction.AxisDirection.POSITIVE, axis));
         KineticBlockEntityRenderer.renderRotatingBuffer(entity, model, pose, buffers.getBuffer(RenderType.solid()), light);

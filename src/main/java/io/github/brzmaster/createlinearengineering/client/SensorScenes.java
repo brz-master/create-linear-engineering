@@ -31,10 +31,9 @@ public final class SensorScenes {
         light(scene, 1, true);
         text(scene, "Approximate mode activates as soon as any part of the carriage overlaps this rail segment. Signal strength is 15, only through the back of the base.", new Vec3(1.5, 1.5, 3));
         for (int x = 2; x <= 4; x++) {
-            scene.world().moveSection(body, new Vec3(.5, 0, 0), 12);
-            scene.idle(12); light(scene, x, true);
-            scene.world().moveSection(body, new Vec3(.5, 0, 0), 13);
-            scene.idle(13); light(scene, x - 1, false);
+            scene.world().moveSection(body, new Vec3(1, 0, 0), 25);
+            scene.idle(1); light(scene, x, true);
+            scene.idle(24); light(scene, x - 1, false);
             scene.idle(10);
         }
         text(scene, "Lamps behind successive sensors follow the carriage. During a transition, Approximate mode can detect the overlap on two neighbouring segments.", new Vec3(3.5, 1.5, 3));

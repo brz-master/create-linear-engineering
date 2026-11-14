@@ -14,8 +14,10 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 @EventBusSubscriber(modid = CreateLinearEngineering.ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public final class LinearPonder implements PonderPlugin {
     @SubscribeEvent public static void setup(FMLClientSetupEvent event) {
-        RailRenderer.init();
-        event.enqueueWork(() -> PonderIndex.addPlugin(new LinearPonder()));
+        event.enqueueWork(() -> {
+            RailRenderer.registerVisual();
+            PonderIndex.addPlugin(new LinearPonder());
+        });
     }
     @SubscribeEvent public static void renderers(net.neoforged.neoforge.client.event.EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(CreateLinearEngineering.RAIL_ENTITY.get(), RailRenderer::new);

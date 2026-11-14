@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.8.5
+
+- Restored carriages reacquire a nearby aligned rail when their original static rail chunk is unloaded.
+- Coupled screw carriages share one mass and support calculation per rigid body per game tick.
+- Screw shafts use Create's Flywheel rotating visual, with extended visibility in the fallback renderer.
+- The Rail Sensor Ponder scene lights the next approximate sensor on the first tick of overlap.
+
 ## 0.8.4
 
 - Fixed toothed carriages stalling at low RPM on rotating screw rails away from the world origin. The drive retains fractional travel between physics steps, with bounded correction during contact and immediate reset on stop or reversal.

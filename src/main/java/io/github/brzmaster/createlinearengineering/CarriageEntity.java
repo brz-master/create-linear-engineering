@@ -40,6 +40,10 @@ public final class CarriageEntity extends BlockEntity implements BlockEntitySubL
 
     public CarriageEntity(BlockPos pos, BlockState state) { super(CreateLinearEngineering.CARRIAGE_ENTITY.get(), pos, state); }
     public boolean isBound() { return bound; }
+    boolean references(SubLevel parent, BlockPos rail) {
+        return bound && Objects.equals(parentId, parent == null ? null : parent.getUniqueId())
+                && railOffset.equals(parent == null ? rail : rail.subtract(parent.getPlot().getCenterBlock()));
+    }
     public boolean hasJoint() { return joint != null && joint.isValid(); }
     RailEntity loadRail() { return registeredLoadRail; }
     private void registerLoad(RailEntity rail) {
@@ -63,7 +67,7 @@ public final class CarriageEntity extends BlockEntity implements BlockEntitySubL
     public void bind(SubLevel parent, BlockPos rail) {
         UUID nextId = parent == null ? null : parent.getUniqueId();
         BlockPos nextOffset = parent == null ? rail.immutable() : rail.subtract(parent.getPlot().getCenterBlock());
-        if (bound && Objects.equals(parentId, nextId) && railOffset.equals(nextOffset)) return;
+        if (references(parent, rail)) return;
         boolean acquiring = !bound;
         unlink();
         removeJoint();
@@ -121,6 +125,9 @@ public final class CarriageEntity extends BlockEntity implements BlockEntitySubL
 
     @Override public void sable$tick(ServerSubLevel child) {
         if (level == null) return;
+        // The saved static origin may be far outside the loaded area after restart.
+        // Release it before searching so the new joint uses the current rail's signed frame.
+        if (bound && parentId == null && !level.hasChunkAt(railOffset)) detach();
         if (!bound) {
             var contact = RailContact.find(child, worldPosition, getBlockState());
             if (contact == null) return;
@@ -225,7 +232,7 @@ public final class CarriageEntity extends BlockEntity implements BlockEntitySubL
         if (parentId != null && parent == null) return;
         BlockPos pos = parent == null ? railOffset : parent.getPlot().getCenterBlock().offset(railOffset);
         SubLevel child = Sable.HELPER.getContaining(level, worldPosition);
-        if (child != null && level.getBlockEntity(pos) instanceof RailEntity rail) rail.remove(child, worldPosition);
+        if (child != null && level.hasChunkAt(pos) && level.getBlockEntity(pos) instanceof RailEntity rail) rail.remove(child, worldPosition);
     }
     @Override public void setRemoved() { removeJoint(); super.setRemoved(); }
 

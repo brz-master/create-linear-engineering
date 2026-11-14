@@ -23,6 +23,34 @@ import java.util.List;
 @GameTestHolder(CreateLinearEngineering.ID)
 @PrefixGameTestTemplate(false)
 public final class ScrewTransferTests {
+    @GameTest(template = "empty", timeoutTicks = 100)
+    public static void restoredCarriageUsesLocalSupportWhenOriginIsUnloaded(GameTestHelper h) {
+        BlockPos support = origin(h, 403);
+        BlockPos oldOrigin = support.south(1024);
+        var level = h.getLevel();
+        var rail = CreateLinearEngineering.SCREW_RAIL.get().defaultBlockState();
+        level.setBlock(support, rail, 3);
+        var body = CarriagePlacement.place(level, support);
+        var carriage = carriage(body);
+        var saved = carriage.saveWithFullMetadata(level.registryAccess());
+        saved.putLong("Rail", oldOrigin.asLong());
+        carriage.beforeTransfer();
+        carriage.loadWithComponents(saved, level.registryAccess());
+        h.runAfterDelay(5, () -> {
+            h.assertTrue(!level.hasChunkAt(oldOrigin), "Local recovery loaded the distant original chunk");
+            h.assertTrue(carriage.hasJoint() && carriage.references(null, support), "Lost local screw support");
+            // An old back-reference can subsequently return from disk in that chunk.
+            level.getChunk(oldOrigin);
+            level.setBlock(oldOrigin, rail, 3);
+            var stale = (RailEntity) level.getBlockEntity(oldOrigin);
+            stale.attach(body, carriage.getBlockPos());
+            stale.refreshBindings();
+            h.assertTrue(carriage.hasJoint() && carriage.references(null, support), "Old rail reclaimed the joint");
+            h.assertTrue(!stale.sable$getConnectionDependencies().iterator().hasNext(), "Stale reverse link survived");
+            h.succeed();
+        });
+    }
+
     @GameTest(template = "empty", timeoutTicks = 110)
     public static void poweredScrewFollowsRotatedMovingParent(GameTestHelper h) {
         BlockPos pos = origin(h, 120);

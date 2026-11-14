@@ -18,7 +18,7 @@ Use `./gradlew` on Linux and macOS. `build/libs/` contains the mod and sources J
 |---|---|
 | `src/main/java/` | Registrations, blocks, items, body lifecycle, native physics integration and client tutorials. |
 | `src/main/resources/` | Metadata, English text, recipes, loot, tags, models, textures and Ponder structures. |
-| `src/gameTest/` | 111 integration tests with the real Sable/Rapier backend. |
+| `src/gameTest/` | 112 integration tests with the real Sable/Rapier backend. |
 | `tools/art/` | Reproducible pixel textures, model generators and documentation renderers. |
 | `tools/generate_ponder.py` | Ponder baseplate and English storyboard entries extracted from Java scenes. |
 | `docs/` | Product specifications, stress formulas and generated renders. |

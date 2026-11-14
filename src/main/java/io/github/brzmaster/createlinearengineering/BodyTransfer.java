@@ -45,10 +45,10 @@ final class BodyTransfer {
         try {
             SubLevelAssemblyHelper.moveBlocks(level, transform, blocks);
             if (changes.stream().anyMatch(change -> !moved(level, change))) {
-                restore(level, changes); return false;
+                restore(level, target, changes); return false;
             }
         } catch (RuntimeException failure) {
-            restore(level, changes);
+            restore(level, target, changes);
             return false;
         } finally {
             level.setBlock(guard, Blocks.AIR.defaultBlockState(), 0);
@@ -93,7 +93,7 @@ final class BodyTransfer {
         return tag;
     }
 
-    private static void restore(ServerLevel level, List<BlockMove> changes) {
+    private static void restore(ServerLevel level, ServerSubLevel target, List<BlockMove> changes) {
         for (BlockMove change : changes) {
             if (level.getBlockEntity(change.destination().getPos()) instanceof CarriageEntity carriage) carriage.beforeTransfer();
         }
@@ -114,7 +114,8 @@ final class BodyTransfer {
         }
         for (BlockMove change : changes) {
             if (level.getBlockEntity(change.source().getPos()) instanceof CarriageEntity carriage) carriage.afterTransfer();
-            if (level.getBlockEntity(change.source().getPos()) instanceof RailEntity rail) rail.refreshBindings();
+            if (level.getBlockEntity(change.source().getPos()) instanceof RailEntity rail)
+                rail.refreshReferences(target, change.destination().getPos());
         }
     }
 }
