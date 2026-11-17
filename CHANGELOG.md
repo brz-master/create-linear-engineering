@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.7
+
+- Linear Rail and Screw Rail placement arrows now check for blocks in the world and on nearby Sable structures. When the preferred end is blocked, the helper checks the opposite end.
+
 ## 0.8.6
 
 - Added support for Sable 2.0.6 on Minecraft 1.21.1 with NeoForge. The same file also supports Sable 2.0.0 through 2.0.5.

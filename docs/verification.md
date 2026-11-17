@@ -1,5 +1,9 @@
 # Verification
 
+## Version 0.8.7
+
+- All 113 native GameTests passed on both Sable 2.0.0 and 2.0.6. The new regression builds a screw rail on a rotated Sable structure, obstructs one end with terrain and the other with a separate body, and checks the placement offset, inventory count and final block position after the wall is removed.
+
 ## Version 0.8.6
 
 - Each NeoForge release of Sable from 2.0.0 through 2.0.6 passed all 112 native GameTests on Minecraft 1.21.1, NeoForge 21.1.259, Create 6.0.10 and Java 21 (784 passes). The tests exercised the same compiled mod classes on every release.

@@ -108,6 +108,58 @@ public final class PlacementAndExitTests {
     }
 
     @GameTest(template = "empty")
+    public static void screwRailExtensionChecksWorldAndOtherSublevels(GameTestHelper h) {
+        var level = h.getLevel();
+        BlockPos pos = origin(h, 307);
+        var rail = CreateLinearEngineering.SCREW_RAIL.get().defaultBlockState()
+                .setValue(LinearBlock.FACING, Direction.EAST).setValue(LinearBlock.NORMAL, Direction.UP);
+        level.setBlock(pos, rail, 3);
+        var lift = assembleOne(h, pos);
+        BlockPos local = lift.getPlot().getCenterBlock();
+        lift.logicalPose().orientation().rotationY(Math.PI / 2);
+        SubLevelContainer.getContainer(level).physicsSystem().getPipeline()
+                .teleport(lift, lift.logicalPose().position(), lift.logicalPose().orientation());
+        lift.updateLastPose();
+        lift.updateBoundingBox();
+        var helper = new RailPlacementHelper(true);
+        var hit = hit(local, Direction.EAST);
+        level.setBlock(pos.north(), Blocks.STONE.defaultBlockState(), 3);
+        var offset = helper.getOffset(player(h), level, rail, local, hit);
+        h.assertTrue(offset.isSuccessful() && offset.getBlockPos().equals(local.west()),
+                "Picker proposed the world wall instead of the clear end of the lift");
+        level.setBlock(pos.south(), Blocks.STONE.defaultBlockState(), 3);
+        var other = assembleOne(h, pos.south());
+        level.setBlock(pos.below(), Blocks.STONE.defaultBlockState(), 3);
+        level.setBlock(pos.south().below(), Blocks.STONE.defaultBlockState(), 3);
+        // Let Sable register the second body in its native spatial index.
+        h.runAfterDelay(3, () -> {
+            var player = player(h);
+            player.setGameMode(GameType.SURVIVAL);
+            ItemStack rails = new ItemStack(rail.getBlock(), 3);
+            player.setItemInHand(InteractionHand.MAIN_HAND, rails);
+            h.assertTrue(!helper.getOffset(player, level, rail, local, hit).isSuccessful(),
+                    "Picker ignored a block belonging to another sublevel");
+            rail.useItemOn(rails, level, player, InteractionHand.MAIN_HAND, hit);
+            var itemUse = rails.useOn(new UseOnContext(player, InteractionHand.MAIN_HAND, hit));
+            h.assertTrue(!itemUse.consumesAction() && rails.getCount() == 3
+                            && level.isEmptyBlock(local.east()) && level.isEmptyBlock(local.west()),
+                    "Blocked extension placed a rail or consumed the item");
+            level.removeBlock(pos.north(), false);
+            var result = rail.useItemOn(rails, level, player, InteractionHand.MAIN_HAND, hit);
+            h.assertTrue(result.consumesAction() && level.getBlockState(local.east()) == rail && rails.getCount() == 2,
+                    "Removing the obstruction did not allow extension on the lift");
+            h.assertTrue(level.isEmptyBlock(pos.north()) && !other.isRemoved(), "Placement modified the wrong body");
+            h.succeed();
+        });
+    }
+
+    private static ServerSubLevel assembleOne(GameTestHelper h, BlockPos pos) {
+        return dev.ryanhcode.sable.api.SubLevelAssemblyHelper.assembleBlocks(h.getLevel(), pos, java.util.List.of(pos),
+                new dev.ryanhcode.sable.companion.math.BoundingBox3i(pos.getX(), pos.getY(), pos.getZ(),
+                        pos.getX(), pos.getY(), pos.getZ()));
+    }
+
+    @GameTest(template = "empty")
     public static void rotatingParentGivesCorrectVelocity(GameTestHelper h) {
         BlockPos pos = origin(h, 26);
         h.getLevel().setBlock(pos, rail(Direction.SOUTH, Direction.UP), 3);
