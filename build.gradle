@@ -2,7 +2,7 @@ plugins {
     id 'java-library'
     id 'net.neoforged.moddev' version '2.0.141'
 }
-version = '0.8.5'
+version = '0.8.6'
 group = 'io.github.brzmaster'
 base { archivesName = 'create-linear-engineering' }
 java { toolchain.languageVersion = JavaLanguageVersion.of(21); withSourcesJar() }
@@ -35,7 +35,7 @@ neoForge.addModdingDependenciesTo(sourceSets.gameTest)
 neoForge.mods.create_linear_engineering.sourceSet(sourceSets.gameTest)
 dependencies {
     gameTestImplementation sourceSets.main.output
-    implementation('maven.modrinth:sable:U678xqle') { transitive = false }
+    implementation("maven.modrinth:sable:${providers.gradleProperty('sableArtifact').getOrElse('fg9dTRz9')}") { transitive = false }
     compileOnly 'dev.ryanhcode.sable-companion:sable-companion-common-1.21.1:1.6.0'
     implementation('com.simibubi.create:create-1.21.1:6.0.10-280') { transitive = false }
     implementation 'net.createmod.ponder:ponder-neoforge:1.0.82+mc1.21.1'

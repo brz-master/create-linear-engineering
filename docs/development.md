@@ -12,6 +12,8 @@ Use JDK 21. The Gradle wrapper downloads the declared build tooling and dependen
 
 Use `./gradlew` on Linux and macOS. `build/libs/` contains the mod and sources JARs. GameTest code is isolated in `src/gameTest/` and is excluded from the distribution JAR. The GameTest task recreates its generated world before each run.
 
+For Sable compatibility checks, pass the NeoForge Modrinth version ID with `-PsableArtifact`. For example, `./gradlew runGameTestServer -PsableArtifact=NGuyFOeE` exercises Sable 2.0.0. The default build uses the NeoForge 2.0.6 artifact.
+
 ## Source layout
 
 | Path | Contents |

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.8.6
+
+- Added support for Sable 2.0.6 on Minecraft 1.21.1 with NeoForge. The same file also supports Sable 2.0.0 through 2.0.5.
+- Existing rails, carriages, sensors and recipes use the same registry IDs and save format.
+
 ## 0.8.5
 
 - Restored carriages reacquire a nearby aligned rail when their original static rail chunk is unloaded.

@@ -2,7 +2,7 @@
 
 Build sliding doors, lifts and moving machinery with physical carriages, linear guides and Create-powered lead screws. Sable handles rigid bodies, mass, gravity and collisions; Create supplies rotation, stress networks and placement assistance.
 
-**Version 0.8.5 · Minecraft 1.21.1 · NeoForge · Java 21**
+**Version 0.8.6 · Minecraft 1.21.1 · NeoForge · Java 21**
 
 ![Linear rails and carriages](docs/renders/final-blocks.png)
 
@@ -15,12 +15,12 @@ Install the mod on **both the client and the server**, together with its require
 | Minecraft | 1.21.1 | 1.21.1 |
 | NeoForge | 21.1.259 | 21.1.259 to below 21.2 |
 | Create | 6.0.10 | 6.0.10 to below 6.1 |
-| Sable | 2.0.5 | 2.0.5 to below 2.0.6 |
+| Sable (NeoForge) | Every release from 2.0.0 through 2.0.6 | 2.0.0 through 2.0.6 inclusive |
 | Java | 21 | 21 |
 
 Install the dependencies required by Create and Sable as well. These dependencies are not bundled in this mod. Aeronautics is not a direct requirement. Compatibility ranges in the metadata are not a claim that every version or modpack combination has been tested.
 
-The file is `create-linear-engineering-0.8.5.jar`. The registry namespace is `create_linear_engineering`. This is a distinct mod identity: blocks and items saved under a different namespace are not automatically converted. Back up existing worlds before changing their installed mods.
+The file is `create-linear-engineering-0.8.6.jar`. The registry namespace is `create_linear_engineering`. This is a distinct mod identity: blocks and items saved under a different namespace are not automatically converted. Back up existing worlds before changing their installed mods.
 
 ## Blocks and items
 

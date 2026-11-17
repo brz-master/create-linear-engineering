@@ -7,7 +7,7 @@
 - Java package: `io.github.brzmaster.createlinearengineering`.
 - Main entry point: `CreateLinearEngineering`.
 - Artifact base name: `create-linear-engineering`.
-- Baseline: Minecraft 1.21.1, NeoForge 21.1.259, Create 6.0.10, Sable 2.0.5 and Java 21.
+- Baseline: Minecraft 1.21.1, NeoForge 21.1.259, Create 6.0.10, Sable 2.0.6 and Java 21. The supported Sable range is 2.0.0 through 2.0.6 on NeoForge.
 
 Registry identity is persistent world data. There is no automatic namespace migration. Install the same build and compatible dependencies on both sides of a multiplayer connection.
 

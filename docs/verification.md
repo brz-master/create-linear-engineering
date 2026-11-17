@@ -1,5 +1,11 @@
 # Verification
 
+## Version 0.8.6
+
+- Each NeoForge release of Sable from 2.0.0 through 2.0.6 passed all 112 native GameTests on Minecraft 1.21.1, NeoForge 21.1.259, Create 6.0.10 and Java 21 (784 passes). The tests exercised the same compiled mod classes on every release.
+- On each of the seven versions, a NeoForge client opened a saved world with the mod JAR installed, received the placed Screw Rail, and resolved its block entity renderer and Flywheel visual.
+- The seven Sable 1.x builds listed on Modrinth for this loader and game version lack the generic constraint configuration and handle used by the carriage joints. Supporting those builds would require a separate physics implementation.
+
 ## Version 0.8.5
 
 - The dedicated GameTest server runs 112 required tests, including recovery with a distant unloaded origin, late loading of an obsolete reverse link, and rollback of a rail carrying a separate physical body.
